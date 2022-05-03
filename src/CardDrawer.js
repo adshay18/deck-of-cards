@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import axios from 'axios';
 import Card from './Card';
-import { cleanup } from '@testing-library/react';
+import './CardDrawer.css';
 
 const CardDrawer = () => {
 	const [ deck, setDeck ] = useState(null);
@@ -65,7 +65,7 @@ const CardDrawer = () => {
 	);
 
 	return (
-		<div>
+		<div className="CardDrawer">
 			<button onClick={() => drawCard()}>Draw One</button>
 			<button onClick={() => setAuto(!auto)}>{!auto ? '' : 'STOP'} AUTO DRAW</button>
 			<br />
